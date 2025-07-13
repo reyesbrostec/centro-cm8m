@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialistas - Centro Médico</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Aplicamos la fuente base y colores */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F4F7F9;
+            color: #333;
+        }
+        .header-bg { background-color: #FFFFFF; }
+        .primary-text { color: #005A9C; }
+        .primary-bg { background-color: #005A9C; }
+        .accent-bg { background-color: #00AEEF; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="header-bg shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold primary-text">
+                Centro Médico
+            </div>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="index.html" class="hover:primary-text transition-colors">Inicio</a></li>
+                <li><a href="especialistas.html" class="hover:primary-text transition-colors">Nuestros Especialistas</a></li>
+                <li><a href="servicios.html" class="hover:primary-text transition-colors">Servicios</a></li>
+                <li><a href="contacto.html" class="hover:primary-text transition-colors">Contacto</a></li>
+            </ul>
+            <a href="portal-paciente.html" class="hidden md:block primary-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+                Portal de Pacientes
+            </a>
+            </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold primary-text mb-8">Título de la Página</h1>
+        
+        <div class="bg-white p-8 rounded-lg shadow-md">
+            <p>Contenido de muestra para esta sección.</p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Centro Médico. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Un sitio web construido con dedicación y profesionalismo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

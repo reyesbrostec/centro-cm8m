@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Centro Médico Salud y Bienestar</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F4F7F9;
+            color: #333;
+        }
+        .header-bg { background-color: #FFFFFF; }
+        .primary-text { color: #005A9C; }
+        .primary-bg { background-color: #005A9C; }
+        .accent-bg { background-color: #00AEEF; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 90, 156, 0.7), rgba(0, 90, 156, 0.7)), url('https://placehold.co/1920x1080/EFEFEF/333333?text=Imagen+del+Centro+M%C3%A9dico');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Encabezado y Navegación -->
+    <header class="header-bg shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold primary-text">
+                Centro Médico
+            </div>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="index.html" class="primary-text font-bold transition-colors">Inicio</a></li>
+                <li><a href="especialistas.html" class="hover:primary-text transition-colors">Nuestros Especialistas</a></li>
+                <li><a href="servicios.html" class="hover:primary-text transition-colors">Servicios</a></li>
+                <li><a href="contacto.html" class="hover:primary-text transition-colors">Contacto</a></li>
+            </ul>
+            <a href="portal-paciente.html" class="hidden md:block accent-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+                Portal de Pacientes
+            </a>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de la Página -->
+    <main>
+        <!-- Sección Hero -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Su Salud, Nuestra Prioridad</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Ofrecemos atención médica integral con un equipo de especialistas comprometidos con su bienestar y el de su familia.</p>
+                <a href="servicios.html" class="accent-bg text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-colors">
+                    Conozca Nuestros Servicios
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Servicios Destacados -->
+        <section class="container mx-auto px-6 py-16">
+            <h2 class="text-3xl font-bold text-center primary-text mb-12">Nuestras Especialidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta de Servicio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="text-4xl accent-bg text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">🩺</div>
+                    <h3 class="text-xl font-bold mb-2 primary-text">Medicina General</h3>
+                    <p class="text-gray-600">Atención primaria, chequeos preventivos y seguimiento de su salud general.</p>
+                </div>
+                <!-- Tarjeta de Servicio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="text-4xl accent-bg text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">❤️</div>
+                    <h3 class="text-xl font-bold mb-2 primary-text">Cardiología</h3>
+                    <p class="text-gray-600">Diagnóstico y tratamiento de enfermedades del corazón y sistema circulatorio.</p>
+                </div>
+                <!-- Tarjeta de Servicio 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="text-4xl accent-bg text-white w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">🧠</div>
+                    <h3 class="text-xl font-bold mb-2 primary-text">Psicología</h3>
+                    <p class="text-gray-600">Apoyo y terapia para el bienestar emocional y la salud mental de toda la familia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Especialistas Destacados -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center primary-text mb-12">Conozca a Nuestro Equipo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center">
+                        <img src="https://placehold.co/400x400/00AEEF/FFFFFF?text=Dr.+Ana+P%C3%A9rez" alt="Foto del Dr. Ana Pérez" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-2xl font-bold primary-text">Dra. Ana Pérez</h3>
+                        <p class="text-gray-500 font-medium">Cardióloga</p>
+                        <p class="mt-2 text-gray-600 max-w-md mx-auto">Con más de 15 años de experiencia, la Dra. Pérez es una líder en cardiología preventiva y tratamiento de hipertensión.</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://placehold.co/400x400/005A9C/FFFFFF?text=Dr.+Carlos+G%C3%B3mez" alt="Foto del Dr. Carlos Gómez" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-2xl font-bold primary-text">Dr. Carlos Gómez</h3>
+                        <p class="text-gray-500 font-medium">Psicólogo Clínico</p>
+                        <p class="mt-2 text-gray-600 max-w-md mx-auto">Especializado en terapia cognitivo-conductual, el Dr. Gómez ofrece un espacio seguro para el crecimiento personal.</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-12">
+                    <a href="especialistas.html" class="primary-bg text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90 transition-colors">
+                        Ver Todos los Especialistas
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Centro Médico. Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Un sitio web construido con dedicación y profesionalismo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
