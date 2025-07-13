@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Centro Médico</title>
+    <title>Contacto y Ubicación - Centro Médico</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Aplicamos la fuente base y colores */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #F4F7F9;
@@ -26,6 +27,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Encabezado y Navegación -->
     <header class="header-bg shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold primary-text">
@@ -35,22 +37,102 @@
                 <li><a href="index.html" class="hover:primary-text transition-colors">Inicio</a></li>
                 <li><a href="especialistas.html" class="hover:primary-text transition-colors">Nuestros Especialistas</a></li>
                 <li><a href="servicios.html" class="hover:primary-text transition-colors">Servicios</a></li>
-                <li><a href="contacto.html" class="hover:primary-text transition-colors">Contacto</a></li>
+                <li><a href="contacto.html" class="primary-text font-bold transition-colors">Contacto</a></li>
             </ul>
-            <a href="portal-paciente.html" class="hidden md:block primary-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="portal-paciente.html" class="hidden md:block accent-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
                 Portal de Pacientes
             </a>
-            </nav>
+        </nav>
     </header>
 
+    <!-- Contenido Principal de la Página -->
     <main class="container mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold primary-text mb-8">Título de la Página</h1>
+        <!-- INICIO SECCIÓN EDITABLE: Título y Descripción -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold primary-text">Póngase en Contacto con Nosotros</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Estamos aquí para ayudarle. Encuentre nuestra ubicación, horarios y envíenos un mensaje a través de nuestro formulario.</p>
+        </div>
+        <!-- FIN SECCIÓN EDITABLE -->
         
-        <div class="bg-white p-8 rounded-lg shadow-md">
-            <p>Contenido de muestra para esta sección.</p>
+        <div class="bg-white rounded-lg shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Columna Izquierda: Información y Mapa -->
+            <div>
+                <h2 class="text-2xl font-bold primary-text mb-6">Información de Contacto</h2>
+                
+                <!-- INICIO SECCIÓN EDITABLE: Datos de Contacto -->
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="accent-bg text-white rounded-full p-2 mr-4 mt-1">📍</span>
+                        <div>
+                            <h4 class="font-bold">Dirección</h4>
+                            <p class="text-gray-600">Av. Amazonas N37-123 y Calle de la República, Quito, Ecuador</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="accent-bg text-white rounded-full p-2 mr-4 mt-1">📞</span>
+                        <div>
+                            <h4 class="font-bold">Teléfonos</h4>
+                            <p class="text-gray-600">(02) 222-3333 / (099) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="accent-bg text-white rounded-full p-2 mr-4 mt-1">✉️</span>
+                        <div>
+                            <h4 class="font-bold">Correo Electrónico</h4>
+                            <p class="text-gray-600">info@centromedico.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="accent-bg text-white rounded-full p-2 mr-4 mt-1">🕒</span>
+                        <div>
+                            <h4 class="font-bold">Horarios de Atención</h4>
+                            <p class="text-gray-600">Lunes a Viernes: 8:00 AM - 7:00 PM</p>
+                            <p class="text-gray-600">Sábados: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN SECCIÓN EDITABLE -->
+
+                <!-- Mapa -->
+                <div class="mt-8 rounded-lg overflow-hidden">
+                    <!-- Puedes reemplazar esta imagen con un iframe de Google Maps si lo prefieres -->
+                    <img src="https://placehold.co/600x400/00AEEF/FFFFFF?text=Mapa+de+Ubicaci%C3%B3n" alt="Mapa de ubicación del centro médico" class="w-full h-64 object-cover">
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario de Contacto -->
+            <div>
+                <h2 class="text-2xl font-bold primary-text mb-6">Envíenos un Mensaje</h2>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Nombre Completo</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="subject" class="block text-gray-700 font-bold mb-2">Asunto</label>
+                        <input type="text" id="subject" name="subject" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full primary-bg text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </main>
 
+    <!-- Pie de Página -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Centro Médico. Todos los derechos reservados.</p>
