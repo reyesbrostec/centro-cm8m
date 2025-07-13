@@ -72,16 +72,16 @@
 
     <script>
         // --- CONFIGURACIÓN DE SUPABASE ---
-        // ! IMPORTANTE: Reemplaza estos valores con tu URL y tu clave 'anon'
         const SUPABASE_URL = 'https://mbzhpfpsfvxtzjzkxebb.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1iemhwZnBzZnZ4dHpqemt4ZWJiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0NDIzODIsImV4cCI6MjA2ODAxODM4Mn0.E0ZqaA-v5lWoNC4lXlAoRWwKU7d5X4Isms09T4s4IBI';
 
-        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        // CORRECCIÓN: Usamos un nombre de variable diferente (supabaseClient) para evitar el conflicto.
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         // --- LÓGICA PARA CARGAR DATOS ---
         async function cargarEspecialistas() {
-            // Hacemos una petición a la tabla 'especialistas' para obtener todos los datos
-            const { data, error } = await supabase
+            // CORRECCIÓN: Usamos la nueva variable supabaseClient para hacer la consulta.
+            const { data, error } = await supabaseClient
                 .from('especialistas')
                 .select('*');
 
