@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialistas - Centro Médico</title>
+    <title>Nuestros Especialistas - Centro Médico</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Aplicamos la fuente base y colores */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #F4F7F9;
@@ -26,6 +27,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Encabezado y Navegación -->
     <header class="header-bg shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold primary-text">
@@ -33,24 +35,90 @@
             </div>
             <ul class="hidden md:flex items-center space-x-6">
                 <li><a href="index.html" class="hover:primary-text transition-colors">Inicio</a></li>
-                <li><a href="especialistas.html" class="hover:primary-text transition-colors">Nuestros Especialistas</a></li>
+                <li><a href="especialistas.html" class="primary-text font-bold transition-colors">Nuestros Especialistas</a></li>
                 <li><a href="servicios.html" class="hover:primary-text transition-colors">Servicios</a></li>
                 <li><a href="contacto.html" class="hover:primary-text transition-colors">Contacto</a></li>
             </ul>
-            <a href="portal-paciente.html" class="hidden md:block primary-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="portal-paciente.html" class="hidden md:block accent-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
                 Portal de Pacientes
             </a>
-            </nav>
+        </nav>
     </header>
 
+    <!-- Contenido Principal de la Página -->
     <main class="container mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold primary-text mb-8">Título de la Página</h1>
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold primary-text">Conozca a Nuestro Equipo de Especialistas</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Profesionales altamente calificados y con una profunda vocación de servicio, dedicados a cuidar de su salud.</p>
+        </div>
         
-        <div class="bg-white p-8 rounded-lg shadow-md">
-            <p>Contenido de muestra para esta sección.</p>
+        <!-- Galería de Especialistas -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Perfil de Especialista 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/00AEEF/FFFFFF?text=Dra.+Ana+P%C3%A9rez" alt="Foto de la Dra. Ana Pérez" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dra. Ana Pérez</h3>
+                    <p class="text-gray-500 font-medium mb-3">Cardióloga</p>
+                    <p class="text-gray-600 text-sm">Más de 15 años de experiencia en cardiología preventiva. Egresada de la Universidad Central.</p>
+                </div>
+            </div>
+
+            <!-- Perfil de Especialista 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/005A9C/FFFFFF?text=Dr.+Carlos+G%C3%B3mez" alt="Foto del Dr. Carlos Gómez" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dr. Carlos Gómez</h3>
+                    <p class="text-gray-500 font-medium mb-3">Psicólogo Clínico</p>
+                    <p class="text-gray-600 text-sm">Especializado en terapia cognitivo-conductual y bienestar emocional para todas las edades.</p>
+                </div>
+            </div>
+
+            <!-- Perfil de Especialista 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/EFEFEF/333333?text=Dra.+Laura+Torres" alt="Foto de la Dra. Laura Torres" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dra. Laura Torres</h3>
+                    <p class="text-gray-500 font-medium mb-3">Pediatra</p>
+                    <p class="text-gray-600 text-sm">Dedicada al cuidado integral de la salud de los más pequeños, desde el nacimiento hasta la adolescencia.</p>
+                </div>
+            </div>
+
+            <!-- Perfil de Especialista 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/EFEFEF/333333?text=Dr.+Jorge+Vera" alt="Foto del Dr. Jorge Vera" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dr. Jorge Vera</h3>
+                    <p class="text-gray-500 font-medium mb-3">Dermatólogo</p>
+                    <p class="text-gray-600 text-sm">Experto en el diagnóstico y tratamiento de enfermedades de la piel, cabello y uñas.</p>
+                </div>
+            </div>
+
+            <!-- Perfil de Especialista 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/00AEEF/FFFFFF?text=Dra.+Marta+Rivas" alt="Foto de la Dra. Marta Rivas" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dra. Marta Rivas</h3>
+                    <p class="text-gray-500 font-medium mb-3">Ginecóloga</p>
+                    <p class="text-gray-600 text-sm">Ofrece atención integral para la salud de la mujer en todas las etapas de su vida.</p>
+                </div>
+            </div>
+
+            <!-- Perfil de Especialista 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
+                <img src="https://placehold.co/400x400/005A9C/FFFFFF?text=Dr.+Luis+Mendoza" alt="Foto del Dr. Luis Mendoza" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold primary-text">Dr. Luis Mendoza</h3>
+                    <p class="text-gray-500 font-medium mb-3">Traumatólogo</p>
+                    <p class="text-gray-600 text-sm">Especialista en lesiones del aparato locomotor, incluyendo huesos, articulaciones y músculos.</p>
+                </div>
+            </div>
+
         </div>
     </main>
 
+    <!-- Pie de Página -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Centro Médico. Todos los derechos reservados.</p>

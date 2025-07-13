@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Centro Médico</title>
+    <title>Nuestros Servicios - Centro Médico</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Aplicamos la fuente base y colores */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #F4F7F9;
@@ -26,6 +27,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- Encabezado y Navegación -->
     <header class="header-bg shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold primary-text">
@@ -34,23 +36,81 @@
             <ul class="hidden md:flex items-center space-x-6">
                 <li><a href="index.html" class="hover:primary-text transition-colors">Inicio</a></li>
                 <li><a href="especialistas.html" class="hover:primary-text transition-colors">Nuestros Especialistas</a></li>
-                <li><a href="servicios.html" class="hover:primary-text transition-colors">Servicios</a></li>
+                <li><a href="servicios.html" class="primary-text font-bold transition-colors">Servicios</a></li>
                 <li><a href="contacto.html" class="hover:primary-text transition-colors">Contacto</a></li>
             </ul>
-            <a href="portal-paciente.html" class="hidden md:block primary-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+            <a href="portal-paciente.html" class="hidden md:block accent-bg text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
                 Portal de Pacientes
             </a>
-            </nav>
+        </nav>
     </header>
 
+    <!-- Contenido Principal de la Página -->
     <main class="container mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold primary-text mb-8">Título de la Página</h1>
+        <!-- INICIO SECCIÓN EDITABLE: Título y Descripción de la Página -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold primary-text">Servicios y Especialidades</h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Ofrecemos una amplia gama de servicios médicos para cubrir todas sus necesidades de salud, con tecnología de punta y un enfoque humano.</p>
+        </div>
+        <!-- FIN SECCIÓN EDITABLE -->
         
-        <div class="bg-white p-8 rounded-lg shadow-md">
-            <p>Contenido de muestra para esta sección.</p>
+        <!-- Listado de Servicios -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">🩺</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Medicina General e Interna</h3>
+                <p class="text-gray-600">Atención integral para adultos, diagnóstico, tratamiento de enfermedades comunes y crónicas, y chequeos preventivos para mantener un estilo de vida saludable.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">❤️</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Cardiología</h3>
+                <p class="text-gray-600">Prevención, diagnóstico y tratamiento de enfermedades cardiovasculares. Realizamos electrocardiogramas, pruebas de esfuerzo y monitoreo Holter.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">👶</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Pediatría</h3>
+                <p class="text-gray-600">Cuidado completo para niños y adolescentes, incluyendo control de crecimiento, vacunación y tratamiento de enfermedades infantiles.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">🤰</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Ginecología y Obstetricia</h3>
+                <p class="text-gray-600">Atención integral de la salud femenina, control prenatal, planificación familiar y menopausia.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 5 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">🧠</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Psicología Clínica</h3>
+                <p class="text-gray-600">Apoyo terapéutico para el manejo de la ansiedad, depresión, estrés y otros desafíos de salud mental. Terapia individual, de pareja y familiar.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- INICIO SECCIÓN EDITABLE: Tarjeta de Servicio 6 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="text-3xl primary-text mb-3">🔬</div> <!-- Puedes cambiar el ícono emoji -->
+                <h3 class="text-xl font-bold mb-2 primary-text">Laboratorio Clínico</h3>
+                <p class="text-gray-600">Toma de muestras y análisis de sangre, orina y otros fluidos para un diagnóstico preciso y rápido. Entrega de resultados en línea.</p>
+            </div>
+            <!-- FIN SECCIÓN EDITABLE -->
+
+            <!-- Para añadir más servicios, simplemente copia y pega una de las secciones de "Tarjeta de Servicio" y modifica su contenido. -->
+
         </div>
     </main>
 
+    <!-- Pie de Página -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Centro Médico. Todos los derechos reservados.</p>
