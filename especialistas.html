@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Supabase Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -52,69 +55,10 @@
             <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Profesionales altamente calificados y con una profunda vocación de servicio, dedicados a cuidar de su salud.</p>
         </div>
         
-        <!-- Galería de Especialistas -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            
-            <!-- Perfil de Especialista 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/00AEEF/FFFFFF?text=Dra.+Ana+P%C3%A9rez" alt="Foto de la Dra. Ana Pérez" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dra. Ana Pérez</h3>
-                    <p class="text-gray-500 font-medium mb-3">Cardióloga</p>
-                    <p class="text-gray-600 text-sm">Más de 15 años de experiencia en cardiología preventiva. Egresada de la Universidad Central.</p>
-                </div>
-            </div>
-
-            <!-- Perfil de Especialista 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/005A9C/FFFFFF?text=Dr.+Carlos+G%C3%B3mez" alt="Foto del Dr. Carlos Gómez" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dr. Carlos Gómez</h3>
-                    <p class="text-gray-500 font-medium mb-3">Psicólogo Clínico</p>
-                    <p class="text-gray-600 text-sm">Especializado en terapia cognitivo-conductual y bienestar emocional para todas las edades.</p>
-                </div>
-            </div>
-
-            <!-- Perfil de Especialista 3 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/EFEFEF/333333?text=Dra.+Laura+Torres" alt="Foto de la Dra. Laura Torres" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dra. Laura Torres</h3>
-                    <p class="text-gray-500 font-medium mb-3">Pediatra</p>
-                    <p class="text-gray-600 text-sm">Dedicada al cuidado integral de la salud de los más pequeños, desde el nacimiento hasta la adolescencia.</p>
-                </div>
-            </div>
-
-            <!-- Perfil de Especialista 4 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/EFEFEF/333333?text=Dr.+Jorge+Vera" alt="Foto del Dr. Jorge Vera" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dr. Jorge Vera</h3>
-                    <p class="text-gray-500 font-medium mb-3">Dermatólogo</p>
-                    <p class="text-gray-600 text-sm">Experto en el diagnóstico y tratamiento de enfermedades de la piel, cabello y uñas.</p>
-                </div>
-            </div>
-
-            <!-- Perfil de Especialista 5 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/00AEEF/FFFFFF?text=Dra.+Marta+Rivas" alt="Foto de la Dra. Marta Rivas" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dra. Marta Rivas</h3>
-                    <p class="text-gray-500 font-medium mb-3">Ginecóloga</p>
-                    <p class="text-gray-600 text-sm">Ofrece atención integral para la salud de la mujer en todas las etapas de su vida.</p>
-                </div>
-            </div>
-
-            <!-- Perfil de Especialista 6 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-                <img src="https://placehold.co/400x400/005A9C/FFFFFF?text=Dr.+Luis+Mendoza" alt="Foto del Dr. Luis Mendoza" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold primary-text">Dr. Luis Mendoza</h3>
-                    <p class="text-gray-500 font-medium mb-3">Traumatólogo</p>
-                    <p class="text-gray-600 text-sm">Especialista en lesiones del aparato locomotor, incluyendo huesos, articulaciones y músculos.</p>
-                </div>
-            </div>
-
+        <!-- Contenedor para la Galería de Especialistas (se llenará con JavaScript) -->
+        <div id="especialistas-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Mensaje de carga inicial -->
+            <p class="col-span-full text-center text-gray-500">Cargando especialistas...</p>
         </div>
     </main>
 
@@ -125,6 +69,52 @@
             <p class="text-sm text-gray-400 mt-2">Un sitio web construido con dedicación y profesionalismo.</p>
         </div>
     </footer>
+
+    <script>
+        // --- CONFIGURACIÓN DE SUPABASE ---
+        // ! IMPORTANTE: Reemplaza estos valores con tu URL y tu clave 'anon'
+        const SUPABASE_URL = 'https://mbzhpfpsfvxtzjzkxebb.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1iemhwZnBzZnZ4dHpqemt4ZWJiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI0NDIzODIsImV4cCI6MjA2ODAxODM4Mn0.E0ZqaA-v5lWoNC4lXlAoRWwKU7d5X4Isms09T4s4IBI';
+
+        const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // --- LÓGICA PARA CARGAR DATOS ---
+        async function cargarEspecialistas() {
+            // Hacemos una petición a la tabla 'especialistas' para obtener todos los datos
+            const { data, error } = await supabase
+                .from('especialistas')
+                .select('*');
+
+            const container = document.getElementById('especialistas-container');
+
+            if (error) {
+                console.error('Error al cargar especialistas:', error);
+                container.innerHTML = '<p class="col-span-full text-center text-red-500">No se pudieron cargar los datos de los especialistas.</p>';
+                return;
+            }
+
+            // Limpiamos el contenedor
+            container.innerHTML = '';
+
+            // Por cada especialista en los datos, creamos una tarjeta HTML
+            data.forEach(especialista => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-lg overflow-hidden text-center';
+                card.innerHTML = `
+                    <img src="${especialista.url_foto}" alt="Foto de ${especialista.nombre_completo}" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold primary-text">${especialista.nombre_completo}</h3>
+                        <p class="text-gray-500 font-medium mb-3">${especialista.especialidad}</p>
+                        <p class="text-gray-600 text-sm">${especialista.descripcion}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Llamamos a la función cuando la página se carga
+        cargarEspecialistas();
+    </script>
 
 </body>
 </html>
